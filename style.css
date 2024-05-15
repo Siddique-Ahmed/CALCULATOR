@@ -1,0 +1,186 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  width: 100%;
+}
+.container {
+  background: #424242;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 0 30px;
+}
+.calculator-wrapper {
+  width: 450px;
+  padding: 50px 20px;
+  background-color: #d3d3d3;
+  border-radius: 5px;
+  box-shadow: 3px -3px 5px, -4px 3px 7px #010101;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+.calculator-wrapper .history-icon-box{
+  position: absolute;
+  top: 7px;
+  right: 10px;
+  color: #424242;
+  font-size: 25px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.calculator-wrapper .history-icon-box #icon{
+  transform: rotate(0deg);
+  transition: transform 0.4s ease-in-out;
+}
+.history-box {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  background: #000000;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  transform: translatey(100%);
+  transition: transform 0.4s ease-in-out;
+  overflow-y: scroll;
+}
+.history-box #history {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  width: 100%;
+  height: 100%;
+  padding: 5px 0;
+}
+.history-box #history li {
+  list-style-type: none;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+  padding: 10px 10px;
+  margin-top: 5px;
+  color: #fff;
+  transition: 0.4s ease-in-out;
+}
+.history-box #history li span {
+  margin: 5px 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+.history-box #history li p {
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.history-box #history li:hover {
+  background-color: #dddddd;
+  color: black;
+}
+.input-box {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  position: relative;
+  overflow: hidden;
+}
+.input-box span {
+  position: absolute;
+  top: 0;
+  right: 10px;
+  color: #333;
+  background-color: #fff;
+}
+.input-box input {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  border: none;
+  box-shadow: -3px 3px 1px 1px, 3 #010101;
+  border-radius: 5px;
+  padding: 5px 15px;
+  font-size: 20px;
+  font-weight: 800;
+  text-align: end;
+  background: #fff;
+  color: #010101;
+}
+.calculator-wrapper .button-box {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.calculator-wrapper .button-box button {
+  width: 80px;
+  height: 50px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -2px -2px 5px, 1px 1px 3px #010101;
+  cursor: pointer;
+  margin-left: 8px;
+  /* padding: 0 10px; */
+  transition: 0.2s ease-in-out;
+}
+.calculator-wrapper .button-box button:hover{
+  background-color: #ccc;
+}
+/* ######## for button special color ######### */
+
+.calculator-wrapper .button-box .black {
+  background-color: black;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.calculator-wrapper .button-box .black:hover {
+  background-color: #000000c5;
+}
+
+.calculator-wrapper .button-box .delete {
+  width: 180px;
+}
+.calculator-wrapper .button-box .orange {
+  background: orangered;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.calculator-wrapper .button-box .orange:hover {
+  background: rgb(193, 52, 1);
+}
+.calculator-wrapper .button-box .red {
+  background: red;
+  color: #fff;
+  transition: 0.2s ease-in-out;
+}
+.calculator-wrapper .button-box .red:hover {
+  background-color: rgb(196, 1, 1);
+}

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator || SMIT</title>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+
+  <div class="container">
+    <div class="calculator-wrapper">
+      <!-- ############ icon ################ -->
+      <div class="history-icon-box">
+        <i id="icon" class="fa-solid fa-clock-rotate-left"></i>
+      </div>
+      <!-- ########### history content ########### -->
+     <div class="history-box">
+      <ul id="history">
+        <!-- <li class="historyValue"><span>value</span> <p>23</p></li>
+        <li class="historyValue"><span>value</span> <p>23</p></li>
+        <li class="historyValue"><span>value</span> <p>23</p></li> -->
+
+      </ul>
+     </div>
+     <!-- ############## Calculator ############### -->
+
+     <!-- ################ input box ################# -->
+     <div class="input-box">
+      <span id="show"></span>
+       <input type="text" readonly id="display">
+     </div>
+
+     <!-- ################ button box ################# -->
+
+    <div class="button-box">
+      <button class="red" onclick="getClear()">AC</button>
+      <button class="red" onclick="getClear()" id="clear">C</button>
+      <button class="black delete" onclick="deleteData()"><i class="fa-solid fa-delete-left"></i></button>
+    </div>
+    <div class="button-box">
+      <button onclick="getValue('7')">7</button>
+      <button onclick="getValue('8')">8</button>
+      <button onclick="getValue('9')">9</button>
+      <button class="black" onclick="getValue('/')"><i class="fa-solid fa-divide"></i></button>
+    </div>
+    <div class="button-box">
+      <button onclick="getValue('4')">4</button>
+      <button onclick="getValue('5')">5</button>
+      <button onclick="getValue('6')">6</button>
+      <button class="black" onclick="getValue('*')">X</button>
+    </div>
+    <div class="button-box">
+      <button onclick="getValue('1')">1</button>
+      <button onclick="getValue('2')">2</button>
+      <button onclick="getValue('3')">3</button>
+      <button class="black" onclick="getValue('-')">-</button>
+    </div>
+    <div class="button-box">
+      <button onclick="getValue('0')">0</button>
+      <button onclick="getValue('.')">.</button>
+      <button class="orange" onclick="getEqualCalculate()">=</button>
+      <button class="black" onclick="getValue('+')">+</button>
+    </div>
+
+    </div>
+  </div>
+  
+  <!-- ############## Script file ############### -->
+
+  <script src="./scrip.js"></script>
+
+</body>
+</html>
